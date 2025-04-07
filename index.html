@@ -36,6 +36,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 /* ロゴ */
@@ -46,13 +47,18 @@
   margin-bottom: 0.5rem;
 }
 
-/* PC用メニュー（横並び） */
+/* PC用メニュー（横並び）背景色変更・下端まで伸ばす */
 .nav-links {
   display: flex;
   flex-direction: row;
   gap: 20px;
   background-color: #1a1a1a;  /* 明るめのグレー背景 */
-  padding: 0.5rem;
+  padding: 1rem 2rem;          /* 上下にパディングを追加 */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
 }
 
 .nav-links a {
@@ -76,6 +82,10 @@
   cursor: pointer;
   color: white;
   user-select: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2001;
 }
 
 /* スマホ時のレイアウト切り替え */
@@ -92,14 +102,6 @@
 
   .menu-toggle {
     display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 2001;
-  }
-
-  .menu-toggle.open {
-    transform: rotate(90deg); /* ハンバーガーが×に変わる */
   }
 
   .nav-links {
@@ -134,7 +136,6 @@
     padding: 1rem;
   }
 }
-
 
 
 .nav-links a:hover {

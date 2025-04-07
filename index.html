@@ -56,9 +56,8 @@
   background-color: #1a1a1a;  /* 明るめのグレー背景 */
   padding: 1rem 2rem;          /* 上下にパディングを追加 */
   width: 100vw;                /* 画面いっぱいに広げる */
-  position: absolute;
-  bottom: -10px;                /* ヘッダーの下端から少しだけ下に配置 */
-  left: 0;                     /* メニューを左に戻す */
+  position: relative;          /* ヘッダーの下に配置 */
+  top: 100%;                   /* ヘッダーの直下に配置 */
   justify-content: center;
 }
 
@@ -84,7 +83,7 @@
   color: white;
   user-select: none;
   position: absolute;
-  top: 3px;  /* 少し上に上げる */
+  top: 2px;  /* 少し上に上げる */
   right: 20px;
   z-index: 2001;
 }
@@ -343,6 +342,7 @@
     <p>© 2025 アーティスト名. All Rights Reserved.</p>
     <p>Follow me on <a href="https://twitter.com/MR10k4_" target="_blank">Twitter</a> | <a href="https://instagram.com/auqxt_" target="_blank">Instagram</a></p>
   </footer>
+<a class="twitter-timeline" data-width="600" data-height="1000" data-theme="dark" href="https://twitter.com/MR10k4_?ref_src=twsrc%5Etfw">Tweets by MR10k4_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script>
   const toggle = document.getElementById("menu-toggle");
   const nav = document.getElementById("nav-links");

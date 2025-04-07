@@ -257,16 +257,21 @@
 }
 
 .image-container {
-  width: 80%;  /* 画像の幅を80%に設定 */
-  max-width: 600px;  /* 最大幅を600pxに設定 */
-  overflow: hidden;
-  border-radius: 15px;
+  width: 200px;  /* 画像の幅を指定 */
+  height: 200px;  /* 高さも指定 */
+  overflow: hidden;  /* 画像が枠からはみ出さないようにする */
+  border-radius: 50%;  /* 丸く切り取る */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .artist-image {
   width: 100%;  /* 画像の幅をコンテナに合わせる */
-  height: auto;
+  height: 100%;  /* 画像の高さもコンテナに合わせる */
+  object-fit: cover;  /* 画像が枠に収まるようにカバー */
 }
+
 
 /* フッターのデザイン */
 footer {

@@ -54,10 +54,9 @@
   flex-direction: row;
   gap: 20px;
   background-color: #e0ffff;  /* 明るめのグレー背景 */
-           /* 上下にパディングを追加 */
   width: 100vw;                /* 画面いっぱいに広げる */
   position: relative;          /* ヘッダーの下に配置 */
-  top: 200%;                    /* メニュー位置をさらに下に配置 */
+  top: 0%;                    /* メニュー位置をさらに下に配置 */
   justify-content: center;
 }
 
@@ -83,7 +82,7 @@
   color: white;
   user-select: none;
   position: absolute;
-  top: -5px;  /* 少し上に上げる */
+  top: -10px;  /* 少し上に上げる */
   right: 20px;
   z-index: 2001;
 }
@@ -335,6 +334,7 @@ footer {
 
     <!-- メニュー -->
     <nav class="nav-links" id="nav-links">
+      <a href="index.html">ホーム</a>
       <a href="profile.html">プロフィール</a>
       <a href="music.html">リリース楽曲</a>
       <a href="contact.html">お問い合わせ</a>

@@ -136,6 +136,30 @@ body {
   opacity: 0.8;
 }
 
+/* アーティスト画像の余白追加 */
+#artist-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;  /* 画像上に100pxの余白を追加 */
+}
+
+.image-container {
+  width: 200px;  /* 画像の幅を指定 */
+  height: 200px;  /* 高さも指定 */
+  overflow: hidden;  /* 画像が枠からはみ出さないようにする */
+  border-radius: 50%;  /* 丸く切り取る */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist-image {
+  width: 100%;  /* 画像の幅をコンテナに合わせる */
+  height: 100%;  /* 画像の高さもコンテナに合わせる */
+  object-fit: cover;  /* 画像が枠に収まるようにカバー */
+}
+
 main {
   padding: 120px 20px 20px; /* ヘッダーが固定されているため、コンテンツが隠れないように余白を追加 */
   text-align: center;

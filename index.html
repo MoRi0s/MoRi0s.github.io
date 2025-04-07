@@ -24,6 +24,7 @@
   top: 0;
   left: 0;
   z-index: 1000;
+  padding: 1.5rem 0; /* ヘッダーの高さを少し増やす */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   width: 100vw;  /* 横全体に広げる */
 }
@@ -56,12 +57,12 @@
   padding: 1rem 2rem;          /* 上下にパディングを追加 */
   width: 100vw;                /* 画面いっぱいに広げる */
   position: relative;          /* ヘッダーの下に配置 */
-  top: 100%;                   /* ヘッダーの直下に配置 */
+  top: 120%;                    /* メニュー位置をさらに下に配置 */
   justify-content: center;
 }
 
 .nav-links a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   font-weight: bold;
   padding: 0.4rem 1.5rem;
@@ -70,8 +71,8 @@
 }
 
 .nav-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #00ffcc;
+  background: rgba(0, 0, 0, 0.1);  /* 背景に軽い影を追加 */
+  color: #0055ff;                   /* ホバー時に文字を青に変更 */
 }
 
 /* ハンバーガーアイコン */

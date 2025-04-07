@@ -54,10 +54,10 @@
   flex-direction: row;
   gap: 20px;
   background-color: #e0ffff;  /* 明るめのグレー背景 */
-  padding: 1rem;          /* 上下にパディングを追加 */
+           /* 上下にパディングを追加 */
   width: 100vw;                /* 画面いっぱいに広げる */
   position: relative;          /* ヘッダーの下に配置 */
-  top: 150%;                    /* メニュー位置をさらに下に配置 */
+  top: 200%;                    /* メニュー位置をさらに下に配置 */
   justify-content: center;
 }
 
@@ -83,7 +83,7 @@
   color: white;
   user-select: none;
   position: absolute;
-  top: 0px;  /* 少し上に上げる */
+  top: -5px;  /* 少し上に上げる */
   right: 20px;
   z-index: 2001;
 }
@@ -281,6 +281,13 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* Twitterの埋め込みウィジェット */
+.twitter-timeline {
+  border: none;
+  width: 100%;
+  max-width: 600px;  /* Twitterウィジェットの最大幅を設定 */
+  height: 1000px;
 }
     /* フッター */
     footer {

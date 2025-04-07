@@ -136,3 +136,15 @@ body {
   opacity: 0.8;
 }
 
+main {
+  padding: 120px 20px 20px; /* ヘッダーが固定されているため、コンテンツが隠れないように余白を追加 */
+  text-align: center;
+}
+    footer a {
+      color: #0055ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }

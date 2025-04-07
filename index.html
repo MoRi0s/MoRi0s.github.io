@@ -57,8 +57,8 @@
   padding: 1rem 2rem;          /* 上下にパディングを追加 */
   width: 100vw;                /* 画面いっぱいに広げる */
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -1px;                /* ヘッダーの下端から少しだけ下に配置 */
+  left: 0;                     /* メニューを左に戻す */
   justify-content: center;
 }
 
@@ -84,7 +84,7 @@
   color: white;
   user-select: none;
   position: absolute;
-  top: 10px;  /* 少し上に上げる */
+  top: 5px;  /* 少し上に上げる */
   right: 20px;
   z-index: 2001;
 }

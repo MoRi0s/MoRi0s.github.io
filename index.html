@@ -122,11 +122,26 @@
       pointer-events: none;
     }
 
-    #intro-video video {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: cover;
-    }
+#intro-video {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3000;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1.5s ease;
+  overflow: hidden;
+}
+
+#intro-video video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
 
     /* フッター */
     footer {
@@ -150,13 +165,14 @@
 </head>
 <body>
 
-  <!-- イントロ動画 -->
-  <div id="intro-video">
-    <video autoplay muted playsinline id="intro">
-      <source src="19.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
+<!-- イントロ動画 -->
+<div id="intro-video">
+  <video autoplay muted playsinline id="intro">
+    <source src="19.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 
   <!-- ヘッダー -->
   <header class="site-header">
@@ -169,13 +185,13 @@
   <!-- SNSリンク -->
   <div class="social-buttons">
     <a href="https://twitter.com/MR10k4_" target="_blank">
-      <img src="assets/logo-white.png" class="icon" alt="Twitter"> Twitter
+      <img src="X.png" class="icon" alt="Twitter"> Twitter
     </a>
     <a href="https://instagram.com/auqxt_" target="_blank">
-      <img src="assets/Instagram_Glyph_Gradient.png" class="icon" alt="Instagram"> Instagram
+      <img src="In.png" class="icon" alt="Instagram"> Instagram
     </a>
     <a href="https://youtube.com/@yourchannel" target="_blank">
-      <img src="assets/icons/youtube.png" class="icon" alt="YouTube"> YouTube
+      <img src="yo.png" class="icon" alt="YouTube"> YouTube
     </a>
     <a href="https://linktr.ee/yourusername" target="_blank">
       <img src="assets/icons/linktree.png" class="icon" alt="Linktree"> Linktree
@@ -184,7 +200,7 @@
       <img src="assets/icons/soundcloud.png" class="icon" alt="SoundCloud"> SoundCloud
     </a>
     <a href="#" id="open-discord">
-      <img src="assets/icons/discord.png" class="icon" alt="Discord"> Discord
+      <img src="assets/icons/discord.png" class="icon" alt="Discord"> Official Discord Server
     </a>
   </div>
 
@@ -239,6 +255,29 @@
       }, 2000);
     });
   </script>
+<!-- 動画再生が終わらなかった時のフェールセーフ -->
+<script>
+  const intro = document.getElementById('intro');
+  const introWrapper = document.getElementById('intro-video');
+
+  function hideIntro() {
+    introWrapper.classList.add('fade-out');
+    setTimeout(() => {
+      introWrapper.remove();
+    }, 2000);
+  }
+
+  // 動画が終わったら非表示
+  if (intro) {
+    intro.addEventListener('ended', hideIntro);
+    // 5秒経っても終わらない場合は強制フェードアウト
+    setTimeout(hideIntro, 5000);
+  } else {
+    // 動画要素自体が無い場合も非表示にする
+    hideIntro();
+  }
+</script>
+
 </body>
 </html>
 

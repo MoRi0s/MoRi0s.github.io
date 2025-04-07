@@ -46,15 +46,17 @@
   margin-bottom: 0.5rem;
 }
 
-/* PC用のメニューを横並びに */
+/* PC用メニュー（横並び） */
 .nav-links {
   display: flex;
-  flex-direction: row;   /* 横並び */
-  gap: 20px;             /* 各リンクの間隔 */
+  flex-direction: row;
+  gap: 20px;
+  background-color: #1a1a1a;  /* 明るめのグレー背景 */
+  padding: 0.5rem;
 }
 
 .nav-links a {
-  color: #ffffff;        /* 白文字 */
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   padding: 0.4rem 1.5rem;
@@ -63,15 +65,14 @@
 }
 
 .nav-links a:hover {
-  background: rgba(255, 255, 255, 0.2); /* 背景がホバーで白く */
-  color: #00ffcc;                      /* ホバー時に文字色が変わる */
+  background: rgba(255, 255, 255, 0.2);
+  color: #00ffcc;
 }
 
-/* ハンバーガーはスマホだけ */
+/* ハンバーガーアイコン */
 .menu-toggle {
   display: none;
   font-size: 2rem;
-  text-align: right;
   cursor: pointer;
   color: white;
   user-select: none;
@@ -91,23 +92,32 @@
 
   .menu-toggle {
     display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2001;
+  }
+
+  .menu-toggle.open {
+    transform: rotate(90deg); /* ハンバーガーが×に変わる */
   }
 
   .nav-links {
     display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: rgba(34, 34, 34, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(34, 34, 34, 0.8); /* 半透明背景 */
     backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 2000;
-    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
   }
 
   .nav-links.open {
@@ -115,17 +125,16 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    padding: 0.5rem 0;
-    pointer-events: auto;
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .nav-links a {
-    width: 100%;
-    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding: 1rem;
   }
 }
+
 
 
 .nav-links a:hover {
@@ -274,14 +283,12 @@
   <!-- ヘッダー -->
 <header class="site-header">
   <div class="header-container">
-    <div class="logo">MoRi</div>
+    <div class="logo">アーティスト名</div>
 
-    <!-- ハンバーガーアイコン -->
-    <div class="menu-toggle" id="menu-toggle">
-      ☰
-    </div>
+    <!-- ☰ ハンバーガー（変更後） -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 
-    <!-- ナビゲーションメニュー -->
+    <!-- メニュー -->
     <nav class="nav-links" id="nav-links">
       <a href="profile.html">プロフィール</a>
       <a href="music.html">リリース楽曲</a>
@@ -289,6 +296,7 @@
     </nav>
   </div>
 </header>
+
 
 
   <!-- プロフィール写真 -->
@@ -340,8 +348,10 @@
 
   toggle.addEventListener("click", () => {
     nav.classList.toggle("open");
+    toggle.classList.toggle("open");
   });
 </script>
+
   <script>
   const modal = document.getElementById("discord-modal");
   const openBtn = document.getElementById("open-discord");

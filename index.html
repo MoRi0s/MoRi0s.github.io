@@ -1,53 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-    <style>
-    p{
-      text-align:center;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>アーティスト名 - Official Website</title>
   <style>
-    .mainbutton {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #2196F3;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+  .social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+
+  .social-buttons a {
+    background-color: #222;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+
+  .social-buttons a:hover {
+    background-color: #444;
+  }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
     }
 
-    .mainbutton:hover {
-      background-color: #0b7dda;
+    /* === イントロ動画 === */
+    #introVideoContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 1s ease;
+    }
+
+    #introVideo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #introVideoContainer.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* === 通常のページ内容 === */
+    header {
+      background: #000;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    img.profile {
+      max-width: 200px;
+      border-radius: 50%;
+      display: block;
+      margin: 1rem auto;
     }
   </style>
-    <script src="components/loader.js"></script><script src="classic.js"></script>
-    <link rel="stylesheet" href="components/loader.css">
-    <link rel="stylesheet" href="style.css">
-
-<font size="5" color="#000000">
 </head>
 <body>
-<p><h1>MoRi/盛岡</h1></br></p>
-<p><img src="profilesss.jpg"></br></p>
 
-<p>Right now I'm in the process of making all of this website. Please wait a little longer.</p>
-<p><button class="mainbutton" onclick="window.open('https://twitter.com/MR10k4_', '_blank')">Twitter</button></br></p>
-<p><button class="mainbutton" onclick="window.open('https://www.instagram.com/auqxt_/', '_blank')">Instagram</button></br></p>
-<p><button class="mainbutton" onclick="window.open('https://www.youtube.com/@MoRi_0ss', '_blank')">YouTube(Music)</button></br></p>
-<p><button class="mainbutton" onclick="window.open('https://www.youtube.com/@subMoRiokA', '_blank')">YouTube(Sub)</button></br></p>
-<p><button class="mainbutton" onclick="window.open('https://youtube.com/channel/UCZ8zi5Vy1uiyQC3iz-KRW4g?si=dxLhPuTuzEjQo6Oa', '_blank')">YouTube(MoRi-Topic)</button></br></p>
-</br>
-<p><button class="mainbutton" onclick="window.open('https://linktr.ee/rz7x4', '_blank')">Link Tree</button></br></p>
-<p><button class="mainbutton" onclick="window.open('https://music.tower.jp/artist/detail/2002901631', '_blank')">Artist Page</button></br></p>
-<p><button class="mainbutton" onclick="window.open('https://soundcloud.com/rz7x4', '_blank')">SoundCloud</button></br></p>
-<p><button class="mainbutton" onclick="window.open('https://discord.gg/PEQc2gf2HJ', '_blank')">Discord server "AQGOSS"</button></br></p>
+  <!-- ★ イントロ動画コンテナ -->
+  <div id="introVideoContainer">
+    <video id="introVideo" autoplay muted playsinline>
+      <source src="19.mp4" type="video/mp4" />
+      お使いのブラウザは動画に対応していません。
+    </video>
+  </div>
+
+  <!-- ★ メインコンテンツ -->
+  <header>
+    <h1>MoRi</h1>
+    <p>Official Website</p>
+  </header>
+
+  <nav>
+    <a href="#about">プロフィール</a>
+    <a href="#music">音楽</a>
+    <a href="#live">ライブ情報</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+
+  <section id="about">
+    <h2>プロフィール</h2>
+    <img src="profile.jpg" alt="アーティスト写真" class="profile" />
+    <p>ここにアーティストの紹介文が入ります。</p>
+  </section>
+
+  <section id="music">
+    <h2>音楽</h2>
+    <ul>
+      <li>1st Album - <strong>タイトル</strong> (2022)</li>
+      <li>2nd Single - <strong>タイトル</strong> (2023)</li>
+    </ul>
+  </section>
+
+  <section id="live">
+    <h2>開催予定のイベント</h2>
+    <ul>
+      <li></li>
+      <li></li>
+    </ul>
+  </section>
+
+<section id="contact">
+  <h2>お問い合わせ</h2>
+  <p>📧 <a href="mailto:info@example.com">info@example.com</a></p>
+
+  <div class="social-buttons">
+    <a href="https://twitter.com/yourusername" target="_blank">🐦 Twitter</a>
+    <a href="https://instagram.com/yourusername" target="_blank">📷 Instagram</a>
+    <a href="https://youtube.com/@yourchannel" target="_blank">▶️ YouTube</a>
+    <a href="https://linktr.ee/yourusername" target="_blank">🌐 Linktree</a>
+    <a href="https://yourartistpage.com" target="_blank">🎤 アーティストページ</a>
+    <a href="https://soundcloud.com/yourusername" target="_blank">🎵 SoundCloud</a>
+    <a href="https://discord.gg/yourserver" target="_blank">💬 Discord</a>
 <p><iframe src="https://discord.com/widget?id=1304432235767926897&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></iframe></br></p>
-<p><button class="mainbutton" onclick="window.open('mailto:mori.0s.info@gmail.com', '_blank')">Official Email</button></br></p>
+
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 MoRi. All rights reserved.</p>
+  </footer>
+
+  <!-- ★ スクリプト：動画再生後にフェードアウト -->
+  <script>
+    const intro = document.getElementById('introVideoContainer');
+    const video = document.getElementById('introVideo');
+
+    video.addEventListener('ended', () => {
+      intro.classList.add('fade-out');
+      setTimeout(() => {
+        intro.style.display = 'none';
+      }, 1000); // フェードアウトに合わせて非表示
+    });
+  </script>
 <p><a class="twitter-timeline" href="https://twitter.com/MR10k4_?ref_src=twsrc%5Etfw">Tweets by MR10k4_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
 </body>
 </html>
-

@@ -212,14 +212,15 @@
 
 <p><a class="twitter-timeline" data-width="600" data-height="1000" data-theme="dark" href="https://twitter.com/MR10k4_?ref_src=twsrc%5Etfw">Tweets by MR10k4_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 <script>
-  const toggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav-links");
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
 
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("open");
-    toggle.classList.toggle("open");
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('open'); // ×アイコン用に拡張も可
   });
 </script>
+
 
   <script>
   const modal = document.getElementById("discord-modal");

@@ -19,7 +19,28 @@ header h1 {
     margin: 0;
     font-size: 3em;
 }
+/* デフォルト（ライトモード） */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
 
+/* ダークモード時の背景とテキスト色 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .overlay-menu {
+        background-color: #000000; /* ← メニュー背景も黒に */
+        color: white;
+    }
+
+    .overlay-nav a:hover {
+        background-color: #222222; /* ホバー時は濃いグレー */
+    }
+}
 
 /* SNSアイコンのスタイル */
 .social-button {
@@ -186,25 +207,4 @@ footer p {
     color: #0055ff; /* ホバー時に文字色を青に変更 */
 }
 
-/* デフォルト（ライトモード） */
-body {
-    background-color: #ffffff;
-    color: #000000;
-}
 
-/* ダークモード時の背景とテキスト色 */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #000000;
-        color: #ffffff;
-    }
-
-    .overlay-menu {
-        background-color: #000000; /* ← メニュー背景も黒に */
-        color: white;
-    }
-
-    .overlay-nav a:hover {
-        background-color: #222222; /* ホバー時は濃いグレー */
-    }
-}

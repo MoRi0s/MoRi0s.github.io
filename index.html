@@ -207,6 +207,9 @@
         <a href="https://www.youtube.com/channel/UCZ8zi5Vy1uiyQC3iz-KRW4g" target="_blank" class="social-button YouTube Topic">
             <img src="youtube_social_square_dark.png" alt="Topic Channel">Topic Channel
         </a>
+        <a href="https://note.com/mr10k4_" target="_blank" class="social-button note">
+            <img src="icon.png" alt="Topic Channel">note
+        </a>
         <a href="https://linktr.ee/rz7x4" target="_blank" class="social-button Linktree">
             <img src="Ltree.png" alt="Linktree">
         </a>
@@ -292,24 +295,13 @@
   }
 </script>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const hamburger = document.getElementById("hamburger-menu");
-        const overlay = document.getElementById("overlay-menu");
-
-        // ハンバーガーメニューをクリックしたときの動作
-        hamburger.addEventListener("click", () => {
-            overlay.classList.toggle("active"); // オーバーレイメニューの表示/非表示
-            hamburger.classList.toggle("active"); // ハンバーガーメニューのアクティブ状態
-        });
-
-        // オーバーレイメニューの外側がクリックされたとき
-        overlay.addEventListener("click", (e) => {
-            if (e.target === overlay) {
-                overlay.classList.remove("active"); // オーバーレイメニューを閉じる
-                hamburger.classList.remove("active"); // ハンバーガーメニューを戻す
-            }
-        });
-    });
+    // メニューの表示/非表示を切り替える関数
+    function toggleMenu() {
+        const menu = document.querySelector('.nav-menu');
+        const hamburger = document.querySelector('.hamburger');
+        menu.classList.toggle('active');  // メニューを表示/非表示に切り替え
+        hamburger.classList.toggle('open');  // ハンバーガーの状態を切り替え
+    }
 </script>
 
 </body>

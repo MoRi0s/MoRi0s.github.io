@@ -120,12 +120,6 @@ footer p {
     font-size: 1.1em;
 }
 
-.overlay-menu.active {
-    display: flex;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-
 /* ハンバーガーメニューのデフォルト（3本線） */
 .hamburger-menu {
     display: none;
@@ -165,3 +159,26 @@ footer p {
     }
 }
 
+/* 初期状態：非表示＆位置ずらし */
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* 表示状態：スライドしながらフェードイン */
+.overlay-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+}

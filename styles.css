@@ -1,17 +1,14 @@
 P { text-align: center }
 H2 { text-align: center }
-
+/* === 共通スタイル === */
 body {
-      margin: 0;
-      padding: 0;
-      background: #111;
-      color: white;
-      font-family: sans-serif;
-      text-align: center;
-      padding-top: 120px;
-    }
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f5f5f5;
+  color: #000;
+}
 
-/* ヘッダー全体 */
+/* === ヘッダー === */
 .site-header {
   background: linear-gradient(to right, #0055ff, #5500ff);
   color: white;
@@ -21,17 +18,24 @@ body {
   position: relative;
 }
 
-/* メニュー本体を白背景で中央寄せ */
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* === ナビゲーション === */
 .nav-menu {
-  background-color: #ffffffcc; /* 半透明の白 */
+  background-color: #ffffffcc;
   width: fit-content;
-  margin: 20px auto 0 auto;  /* 上だけマージン空ける */
+  margin: 20px auto 0 auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   padding: 10px 20px;
+  z-index: 1000;
 }
 
-/* メニューリスト */
 .nav-menu ul {
   list-style: none;
   display: flex;
@@ -40,95 +44,150 @@ body {
   padding: 0;
 }
 
-/* メニューリンク */
 .nav-menu a {
   color: #000;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* スマホ用では非表示（ハンバーガーが代わりに出る） */
+/* === ハンバーガーメニュー === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 2000;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* === モバイル用ナビ === */
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    animation: slideDownFade 0.3s ease forwards;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }
 
-  .nav-menu.active {
-    display: flex; /* ハンバーガークリックで表示 */
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
   }
-}
-  .nav-menu.active {
-    display: flex; /* ハンバーガークリックで表示 */
-  }
-}
-  .nav-links.open {
+  100% {
+    opacity: 1;
     transform: translateY(0);
   }
-
-  .nav-links a {
-    color: #000000;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    padding: 1rem;
-  }
-
-
-.nav-links a:hover {
-  opacity: 0.8;
 }
 
-/* アーティスト画像の余白追加 */
-#artist-image {
-  display: flex;
+/* === アーティスト画像 === */
+.artist-photo {
+  display: block;
+  margin: 60px auto 20px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* === Discordウィジェット === */
+.discord-widget {
+  display: none;
   justify-content: center;
-  align-items: center;
-  margin-top: 100px;  /* 画像上に100pxの余白を追加 */
+  margin: 40px auto;
 }
 
-.image-container {
-  width: 200px;  /* 画像の幅を指定 */
-  height: 200px;  /* 高さも指定 */
-  overflow: hidden;  /* 画像が枠からはみ出さないようにする */
-  border-radius: 50%;  /* 丸く切り取る */
+.discord-widget.active {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.artist-image {
-  width: 100%;  /* 画像の幅をコンテナに合わせる */
-  height: 100%;  /* 画像の高さもコンテナに合わせる */
-  object-fit: cover;  /* 画像が枠に収まるようにカバー */
-}
-
-main {
-  padding: 120px 20px 20px; /* ヘッダーが固定されているため、コンテンツが隠れないように余白を追加 */
-  text-align: center;
-}
+/* === フッター === */
 footer {
-  background-color: #2b2b2b !important;
-  color: white !important;
+  background-color: #2b2b2b;
+  color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 30px 10px;
+  position: relative;
 }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+footer .footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 
-.footer-content {
+footer img.footer-gif {
+  height: 40px;
+  width: auto;
+}
+
+.twitter-embed {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* === オーバーレイ動画（フェードアウト） === */
+#intro-video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;  /* 文字とGIFの間隔 */
-  padding: 20px 0;
+  transition: opacity 1.5s ease;
 }
 
-.footer-gif {
-  width: 40px;   /* 小さめサイズに調整 */
-  height: 40px;
-  animation: fadeIn 1s ease-in-out;
+#intro-video-container.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 

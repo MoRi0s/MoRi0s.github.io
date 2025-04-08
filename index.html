@@ -6,6 +6,7 @@
     <meta name="description" content="MoRiによるホームページ">
     <title>MoRi - ホームページ</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="burger.css">
     <style>
     /* Discordモーダル */
  .modal {
@@ -91,58 +92,58 @@
   height: 1000px;
 }
 
-        /* オーバーレイメニューのスタイル */
-        .overlay-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-            opacity: 0;
-            transform: translateX(100%);
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
+ /* オーバーレイメニューのスタイル */
+ .overlay-menu {
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
 
-        .overlay-menu.active {
-            display: flex;
-            opacity: 1;
-            transform: translateX(0);
-        }
+    .overlay-menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateX(0);
+    }
 
-        /* メニューリンクのスタイル */
-        .overlay-nav a {
-            display: block;
-            font-size: 2em;
-            margin: 20px 0;
-            text-decoration: none;
-            color: white; /* 白色に設定 */
-            padding: 10px 20px;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-        }
+    /* メニューリンクのスタイル */
+    .overlay-nav a {
+         display: block;
+        font-size: 2em;
+        margin: 20px 0;
+        text-decoration: none;
+        color: white; /* 白色に設定 */
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
 
-        .overlay-nav a:hover {
-            background-color: #e0f0ff; /* ライトブルー */
-            color: #0055ff; /* ホバー時に文字色を青に変更 */
-        }
+    .overlay-nav a:hover {
+        background-color: #e0f0ff; /* ライトブルー */
+        color: #0055ff; /* ホバー時に文字色を青に変更 */
+    }
 
-        /* メニューアイテム */
-        .menu-item {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.5em;
-        }
+    /* メニューアイテム */
+    .menu-item {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1.5em;
+    }
 
         /* ハンバーガーメニュー用のオーバーレイメニュー */
-        .overlay-nav {
-            text-align: center;
-        }
+     .overlay-nav {
+        text-align: center;
+    }
     </style>
 </head>
 <body>

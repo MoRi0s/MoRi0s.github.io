@@ -120,7 +120,6 @@
         <a href="contact.html" class="menu-item">お問い合わせ</a>
     </div>
 </div>
-
 <header>
     <h1>MoRi</h1>
 </header>
@@ -194,22 +193,8 @@
 
 <p><a class="twitter-timeline" data-width="600" data-height="1000" data-theme="dark" href="https://twitter.com/MR10k4_?ref_src=twsrc%5Etfw">Tweets by MR10k4_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 
-  <script>
-  const modal = document.getElementById("discord-modal");
-  const openBtn = document.getElementById("open-discord");
-  const closeBtn = document.querySelector(".close-btn");
-
-  openBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-    // トグル表示
-    modal.style.display = modal.style.display === "flex" ? "none" : "flex";
-  });
-
-  closeBtn.addEventListener("click", function () {
-    modal.style.display = "none";
-  });
-
-
+ 
+<script>
     // イントロ動画フェードアウト
     const intro = document.getElementById('intro');
     const introWrapper = document.getElementById('intro-video');
@@ -220,7 +205,7 @@
         introWrapper.remove();
       }, 2000);
     });
-  </script>
+</script>
 <!-- 動画再生が終わらなかった時のフェールセーフ -->
 <script>
   const intro = document.getElementById('intro');
@@ -244,25 +229,39 @@
   }
 </script>
 <script>
-    // ハンバーガーメニューのクリックイベント
     document.addEventListener("DOMContentLoaded", function () {
         const hamburger = document.getElementById("hamburger-menu");
         const overlay = document.getElementById("overlay-menu");
 
+        // ハンバーガーメニューをクリックしたときの動作
         hamburger.addEventListener("click", () => {
-            overlay.classList.toggle("active");
-            hamburger.classList.toggle("active");
+            overlay.classList.toggle("active"); // オーバーレイメニューの表示/非表示
+            hamburger.classList.toggle("active"); // ハンバーガーメニューのアクティブ状態
         });
 
-        // オーバーレイメニューがクリックされたら閉じる
+        // オーバーレイメニューの外側がクリックされたとき
         overlay.addEventListener("click", (e) => {
             if (e.target === overlay) {
-                overlay.classList.remove("active");
-                hamburger.classList.remove("active");
+                overlay.classList.remove("active"); // オーバーレイメニューを閉じる
+                hamburger.classList.remove("active"); // ハンバーガーメニューを戻す
             }
         });
     });
 </script>
+<script>
+  const modal = document.getElementById("discord-modal");
+  const openBtn = document.getElementById("open-discord");
+  const closeBtn = document.querySelector(".close-btn");
 
+  openBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    // トグル表示
+    modal.style.display = modal.style.display === "flex" ? "none" : "flex";
+  });
+
+  closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+</script>
 </body>
 </html>

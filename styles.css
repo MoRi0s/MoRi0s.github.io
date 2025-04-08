@@ -154,8 +154,3 @@ footer img.footer-gif {
   width: auto;
 }
 
-/* === オーバーレイ動画（フェードアウト） === */
-#intro-video-container {
-  display: none; /* イントロ動画の表示を消す */
-}
-

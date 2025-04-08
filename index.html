@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>アーティスト名 - Official Site</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アーティストホームページ</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-mode">
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="about.html">プロフィール</a></li>
+                <li><a href="news.html">ニュース</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="profile-img">
+                <img src="profile.jpg" alt="アーティストの写真">
+            </div>
+            <h1>アーティスト名</h1>
+            <p>音楽で世界を感じてみてください。</p>
+        </section>
+        
+        <section class="social-media">
+            <a href="https://twitter.com/artist" target="_blank" class="social-btn">Twitter</a>
+            <a href="https://instagram.com/artist" target="_blank" class="social-btn">Instagram</a>
+            <a href="https://facebook.com/artist" target="_blank" class="social-btn">Facebook</a>
+        </section>
+    </main>
 
-  <header class="hero">
-    <div class="logo-container">
-      <img src="logo.png" alt="アーティストロゴ" class="logo" id="logoBtn">
-      <h1 class="artist-name">アーティスト名</h1>
-    </div>
-  </header>
-
-  <section class="intro-video">
-    <video autoplay muted loop playsinline>
-      <source src="19.mp4" type="video/mp4" />
-      お使いのブラウザは動画タグをサポートしていません。
-    </video>
-  </section>
-
-  <footer>
-    <div class="social-icons">
-      <a href="https://twitter.com/" target="_blank"><img src="X.png" alt="Twitter"></a>
-      <a href="https://instagram.com/" target="_blank"><img src="In.svg" alt="Instagram"></a>
-      <a href="https://youtube.com/" target="_blank"><img src="icons/youtube.svg" alt="YouTube"></a>
-    </div>
-    <p>&copy; 2025 アーティスト名 All rights reserved.</p>
-  </footer>
-
+    <footer>
+        <p>&copy; 2025 アーティスト名</p>
+    </footer>
 </body>
 </html>

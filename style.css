@@ -120,6 +120,12 @@ footer p {
     font-size: 1.1em;
 }
 
+.overlay-menu.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+
 /* ハンバーガーメニューのデフォルト（3本線） */
 .hamburger-menu {
     display: none;

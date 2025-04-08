@@ -164,9 +164,14 @@ main {
   padding: 120px 20px 20px; /* ヘッダーが固定されているため、コンテンツが隠れないように余白を追加 */
   text-align: center;
 }
-    footer a {
-      color: #0055ff;
-      text-decoration: none;
+    /* フッター */
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
     }
 
     footer a:hover {

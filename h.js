@@ -1,11 +1,17 @@
-// ハンバーガーメニューのクリックイベント
-document.getElementById("hamburger-menu").addEventListener("click", function() {
-    document.getElementById("overlay-menu").style.display = "flex"; // メニューを表示
-});
+// メニューを開閉する処理
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger-menu");
+    const overlay = document.getElementById("overlay-menu");
 
-// オーバーレイメニューを閉じるためのクリックイベント
-document.getElementById("overlay-menu").addEventListener("click", function(event) {
-    if (event.target === this) {
-        document.getElementById("overlay-menu").style.display = "none"; // メニューを非表示
-    }
+    // ハンバーガークリックでメニュー表示
+    hamburger.addEventListener("click", () => {
+        overlay.classList.add("active");
+    });
+
+    // メニューの外側クリックで非表示に
+    overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) {
+            overlay.classList.remove("active");
+        }
+    });
 });

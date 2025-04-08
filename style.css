@@ -182,3 +182,47 @@ footer p {
     opacity: 1;
     transform: translateX(0);
 }
+/* メニュー背景を白に */
+.overlay-menu {
+    background-color: white; /* ← 白背景 */
+    color: black;            /* テキスト黒に */
+}
+
+/* メニューリンクのスタイル */
+.overlay-nav a {
+    display: block;
+    font-size: 2em;
+    margin: 20px 0;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* ホバー時に薄い青（ライトブルー） */
+.overlay-nav a:hover {
+    background-color: #e0f0ff;
+}
+/* デフォルト（ライトモード） */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* ダークモード時の背景とテキスト色 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .overlay-menu {
+        background-color: #000000; /* ← メニュー背景も黒に */
+        color: white;
+    }
+
+    .overlay-nav a:hover {
+        background-color: #222222; /* ホバー時は濃いグレー */
+    }
+}

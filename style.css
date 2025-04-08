@@ -30,11 +30,6 @@ header h1 {
     cursor: pointer;
 }
 
-.social-links {
-    text-align: center;
-    margin-top: 20px;
-}
-
 /* SNSアイコンのスタイル */
 .social-button {
     margin: 0 15px;
@@ -61,10 +56,8 @@ header h1 {
     }
 }
 
-
-
-.social-buttons:hover {
-    transform: scale(1.1);
+.social-button:hover {
+    transform: scale(1.1); /* ホバー時に拡大 */
 }
 
 /* メニューをヘッダー下中央に配置 */
@@ -116,7 +109,6 @@ footer {
     }
 }
 
-
 .footer-content {
     display: flex;
     justify-content: center;
@@ -133,6 +125,7 @@ footer p {
     margin: 0;
     font-size: 1.1em;
 }
+
 /* 通常（PCなど大きな画面）では表示 */
 .menu {
     display: flex;
@@ -209,6 +202,7 @@ footer p {
     opacity: 1;
     transform: translateX(0);
 }
+
 /* メニュー背景を白に */
 .overlay-menu {
     background-color: white; /* ← 白背景 */
@@ -233,7 +227,6 @@ footer p {
     color: #0055ff; /* ホバー時に文字色を青に変更 */
 }
 
-}
 /* デフォルト（ライトモード） */
 body {
     background-color: #ffffff;

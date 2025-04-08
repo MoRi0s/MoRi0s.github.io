@@ -7,6 +7,55 @@ body {
     color: #333;
 }
 
+/* ヘッダー */
+.site-header {
+    width: 100%;
+    background: linear-gradient(to right, #0055ff, #5500ff);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #0055ff;
+}
+
 /* ハンバーガーメニュー */
 .hamburger {
     display: none;
@@ -15,9 +64,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
     z-index: 1000;
 }
 
@@ -28,7 +74,7 @@ body {
     transition: 0.3s;
 }
 
-/* ハンバーガーが開いた状態 */
+/* ハンバーガーメニュー開いた状態 */
 .hamburger.open .bar:nth-child(1) {
     transform: rotate(45deg) translateY(10px);
 }
@@ -42,6 +88,11 @@ body {
 }
 
 /* メニュー */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
 .nav-menu {
     display: none;
     flex-direction: column;
@@ -76,9 +127,58 @@ body {
     color: #0055ff;
 }
 
-/* メディアクエリでハンバーガーメニューを表示 */
+/* レスポンシブデザイン */
 @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
     .hamburger {
         display: flex;
+    }
+}
+
+/* メインコンテンツ */
+main {
+    padding: 120px 20px 20px;
+    text-align: center;
+}
+
+/* フッター */
+footer {
+    background-color: #2b2b2b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ダークモード */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .site-header {
+        background: linear-gradient(to right, #333333, #444444);
+    }
+
+    .footer-content {
+        color: white;
+    }
+
+    .nav-links a {
+        color: white;
     }
 }

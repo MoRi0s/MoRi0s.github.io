@@ -103,12 +103,14 @@
   </video>
 </div>
 
+    <header>
+        <h1>アーティストの名前</h1>
+        <!-- ハンバーガーメニュー -->
+        <div class="hamburger-menu" id="hamburger-menu">
+            &#9776; <!-- ハンバーガーアイコン -->
+        </div>
+    </header>
 
-  <!-- ヘッダー -->
-<!-- ヘッダー内のアーティスト名 -->
-<header class="site-header">
- <h1><div class="logo">MoRi</div></h1>
-</header>
     <nav class="nav-menu">
 　　　<a href="index.html">ホーム</a>
       <a href="profile.html">プロフィール</a>
@@ -170,15 +172,16 @@
 
 <p><a class="twitter-timeline" data-width="600" data-height="1000" data-theme="dark" href="https://twitter.com/MR10k4_?ref_src=twsrc%5Etfw">Tweets by MR10k4_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 
-  <!-- スマホ用メニュー -->
-  <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.nav-menu');
-      const hamburger = document.querySelector('.hamburger');
-      menu.classList.toggle('active');
-      hamburger.classList.toggle('open');
-    }
-  </script>
+    <!-- モバイル用オーバーレイメニュー -->
+    <div class="overlay-menu" id="overlay-menu">
+        <nav class="overlay-nav">
+            <a href="about.html">アーティスト紹介</a>
+            <a href="portfolio.html">ポートフォリオ</a>
+            <a href="news.html">ニュース</a>
+            <a href="contact.html">お問い合わせ</a>
+        </nav>
+    </div>
+
 
   <script>
   const modal = document.getElementById("discord-modal");

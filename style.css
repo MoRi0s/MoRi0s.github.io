@@ -26,119 +26,6 @@ header h1 {
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.social-links {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.social-button {
-    margin: 0 15px;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #fff;
-    transition: transform 0.3s ease;
-}
-
-.social-button img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* SNSアイコンのサイズを50px四方に設定 */
-.social-buttons img {
-    width: 50px;
-    height: 50px;
-}
-
-.social-buttons:hover {
-    transform: scale(1.1);
-}
-
-/* メニューをヘッダー下中央に配置 */
-nav {
-    text-align: center;
-    margin-top: 20px;
-}
-
-nav a {
-    color: #000;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* アイコンを丸く表示 */
-.icon-container {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.artist-icon {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #0055ff;
-}
-
-/* フッターのスタイル */
-footer {
-    background-color: #2b2b2b;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    width: 100%;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-gif {
-    width: 50px;
-    height: 50px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1.1em;
-}
-/* 通常（PCなど大きな画面）では表示 */
-.menu {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-/* モバイル（768px以下）では非表示に */
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-    }
-}
-
-/* ハンバーガーメニューのデフォルト（3本線） */
-.hamburger-menu {
-    display: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
     width: 30px;
     height: 24px;
     cursor: pointer;
@@ -165,10 +52,15 @@ footer p {
     transform: rotate(-45deg) translateY(-10px);
 }
 
-/* モバイル表示で出す */
+/* モバイル表示でハンバーガーメニューを出す */
 @media (max-width: 768px) {
     .hamburger-menu {
         display: flex;
+    }
+
+    /* 通常メニュー（PC用）非表示 */
+    .menu {
+        display: none;
     }
 }
 
@@ -195,6 +87,7 @@ footer p {
     opacity: 1;
     transform: translateX(0);
 }
+
 /* メニュー背景を白に */
 .overlay-menu {
     background-color: white; /* ← 白背景 */
@@ -207,16 +100,19 @@ footer p {
     font-size: 2em;
     margin: 20px 0;
     text-decoration: none;
-    color: inherit;
+    color: inherit; /* 親要素の色を継承 */
     padding: 10px 20px;
     border-radius: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* 背景色と文字色も変わるように */
 }
 
-/* ホバー時に薄い青（ライトブルー） */
+/* ホバー時に背景色と文字色を変更 */
 .overlay-nav a:hover {
-    background-color: #e0f0ff;
+    background-color: #e0f0ff; /* ライトブルー */
+    color: #0055ff; /* ホバー時に文字色を青に変更 */
 }
+
+
 /* デフォルト（ライトモード） */
 body {
     background-color: #ffffff;

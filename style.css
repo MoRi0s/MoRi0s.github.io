@@ -35,11 +35,12 @@ header h1 {
     margin-top: 20px;
 }
 
+/* SNSアイコンのスタイル */
 .social-button {
     margin: 0 15px;
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 50px; /* 初期状態でのサイズ */
+    height: 50px; /* 初期状態でのサイズ */
     border-radius: 50%;
     overflow: hidden;
     background-color: #fff;
@@ -52,11 +53,15 @@ header h1 {
     object-fit: cover;
 }
 
-/* SNSアイコンのサイズを50px四方に設定 */
-.social-buttons img {
-    width: 50px;
-    height: 50px;
+/* モバイル（768px以下）の場合、SNSアイコンのサイズを調整 */
+@media (max-width: 768px) {
+    .social-button {
+        width: 40px; /* SNSアイコンの幅を少し小さく */
+        height: 40px; /* SNSアイコンの高さを少し小さく */
+    }
 }
+
+
 
 .social-buttons:hover {
     transform: scale(1.1);

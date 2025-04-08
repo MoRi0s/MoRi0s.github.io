@@ -120,39 +120,42 @@ footer p {
     font-size: 1.1em;
 }
 
-/* モバイル用オーバーレイメニューのスタイル */
-.overlay-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+/* ハンバーガーメニューのデフォルト（3本線） */
+.hamburger-menu {
     display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.overlay-nav {
-    text-align: center;
+.hamburger-menu .bar {
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s;
 }
 
-.overlay-nav a {
-    display: block;
-    color: white;
-    font-size: 2em;
-    margin: 20px 0;
-    text-decoration: none;
+/* ハンバーガーがアクティブになった時（バツ印） */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
+}
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
 }
 
-.overlay-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ハンバーガーメニューが表示されるモバイルビューのスタイル */
+/* モバイル表示で出す */
 @media (max-width: 768px) {
     .hamburger-menu {
-        display: block;
+        display: flex;
     }
 }
+

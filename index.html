@@ -165,9 +165,15 @@
     <div class="overlay-nav">
         <a href="index.html" class="menu-item">ホーム</a>
         <a href="profile.html" class="menu-item">プロフィール</a>
+        <a href="profile.html" class="menu-item">お知らせ</a>
         <a href="releases.html" class="menu-item">リリース楽曲</a>
         <a href="contact.html" class="menu-item">お問い合わせ</a>
     </div>
+</div>
+<div class="hamburger-menu" id="hamburger-menu">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
 </div>
 <header>
     <h1>MoRi</h1>
@@ -176,15 +182,12 @@
     <nav class="menu">
 　　　<a href="index.html">ホーム</a>
       <a href="profile.html">プロフィール</a>
+    　<a href="news.html">プロフィール</a>
       <a href="releases.html">リリース楽曲</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
 
-<div class="hamburger-menu" id="hamburger-menu">
-  <span class="bar"></span>
-  <span class="bar"></span>
-  <span class="bar"></span>
-</div>
+
     <div class="icon-container">
         <img src="profilesss.jpg" alt="アーティストのアイコン" class="artist-icon">
     </div>
@@ -294,15 +297,7 @@
     hideIntro();
   }
 </script>
-<script>
-    // メニューの表示/非表示を切り替える関数
-    function toggleMenu() {
-        const menu = document.querySelector('.nav-menu');
-        const hamburger = document.querySelector('.hamburger');
-        menu.classList.toggle('active');  // メニューを表示/非表示に切り替え
-        hamburger.classList.toggle('open');  // ハンバーガーの状態を切り替え
-    }
-</script>
+ <script src="script.js"></script>
 
 </body>
 </html>

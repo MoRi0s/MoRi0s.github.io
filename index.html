@@ -90,46 +90,6 @@
   max-width: 600px;  /* Twitterウィジェットの最大幅を設定 */
   height: 1000px;
 }
-        /* ハンバーガーメニューのスタイル */
-        .hamburger-menu {
-            display: none;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 30px;
-            height: 24px;
-            cursor: pointer;
-            z-index: 1001;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .hamburger-menu .bar {
-            height: 4px;
-            background-color: white;
-            border-radius: 2px;
-            transition: 0.3s;
-        }
-
-        /* ハンバーガーがアクティブになった時（バツ印） */
-        .hamburger-menu.active .bar:nth-child(1) {
-            transform: rotate(45deg) translateY(10px);
-        }
-
-        .hamburger-menu.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger-menu.active .bar:nth-child(3) {
-            transform: rotate(-45deg) translateY(-10px);
-        }
-
-        /* モバイル表示で出す */
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: flex;
-            }
-        }
 
         /* オーバーレイメニューのスタイル */
         .overlay-menu {

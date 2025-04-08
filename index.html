@@ -17,6 +17,7 @@
 
 /* ヘッダー共通 */
 /* 共通スタイル */
+/* 共通スタイル */
 .site-header {
   width: 100%;
   background: linear-gradient(to right, #0055ff, #5500ff);
@@ -37,6 +38,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 /* ロゴ */
@@ -47,14 +49,19 @@
   margin-bottom: 0.5rem;
 }
 
-/* PC用メニュー（横並び） */
+/* PC用メニュー（横並び）背景色変更・下端まで伸ばす */
 .nav-links {
   display: flex;
   flex-direction: row;
   gap: 20px;
   background-color: #1a1a1a;  /* 明るめのグレー背景 */
-  padding: 0.5rem;
-}
+  padding: 1rem 2rem;          /* 上下にパディングを追加 */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  justify
+
 
 .nav-links a {
   color: #ffffff;

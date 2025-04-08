@@ -1,41 +1,256 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アーティストホームページ</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>アーティスト名 - Official Site</title>
+  <style>
+  #intro-video {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1.5s ease;
+  }
+
+  #intro-video.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #intro-video video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+
+  .discord-btn {
+    background-color: #5865F2;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* モーダル背景 */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: #2c2f33;
+    padding: 1rem;
+    border-radius: 12px;
+    position: relative;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    font-size: 1.4rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  .modal iframe {
+    border: none;
+    border-radius: 8px;
+  }
+
+      .site-header {
+  width: 100%;
+  padding: 1rem 0;
+  background: linear-gradient(to right, #0055ff, #5500ff);
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+body {
+  padding-top: 70px; /* ヘッダー分の余白 */
+}
+
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    img.profile {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .social-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+
+    .social-buttons a {
+      background-color: #333;
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+      font-size: 0.9rem;
+    }
+
+    .social-buttons a:hover {
+      background-color: #555;
+    }
+
+    .nav-links {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+    }
+
+    .nav-links a {
+      color: #aaa;
+      margin: 0 8px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="about.html">プロフィール</a></li>
-                <li><a href="news.html">ニュース</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="hero">
-            <div class="profile-img">
-                <img src="profile.jpg" alt="アーティストの写真">
-            </div>
-            <h1>アーティスト名</h1>
-            <p>音楽で世界を感じてみてください。</p>
-        </section>
-        
-        <section class="social-media">
-            <a href="https://twitter.com/artist" target="_blank" class="social-btn">Twitter</a>
-            <a href="https://instagram.com/artist" target="_blank" class="social-btn">Instagram</a>
-            <a href="https://facebook.com/artist" target="_blank" class="social-btn">Facebook</a>
-        </section>
-    </main>
+<!-- 動画イントロラッパー -->
+<div id="intro-video">
+  <video autoplay muted playsinline id="intro" width="100%" height="100%">
+    <source src="19.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
-    <footer>
-        <p>&copy; 2025 アーティスト名</p>
-    </footer>
+      <!-- ★ メインコンテンツ -->
+  <header>
+    <h1>アーティスト名</h1>
+    <p>Official Website</p>
+  </header>
+
+  <nav>
+    <a href="#about">プロフィール</a>
+    <a href="#music">音楽</a>
+    <a href="#live">ライブ情報</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+
+  <img src="assets/profile.jpg" alt="アーティスト写真" class="profile">
+  <h1>アーティスト名</h1>
+
+  <div class="social-buttons">
+    <a href="https://twitter.com/yourusername" target="_blank">🐦 Twitter</a>
+    <a href="https://instagram.com/yourusername" target="_blank">📷 Instagram</a>
+    <a href="https://youtube.com/@yourchannel" target="_blank">▶️ YouTube</a>
+    <a href="https://linktr.ee/yourusername" target="_blank">🌐 Linktree</a>
+    <a href="https://soundcloud.com/yourusername" target="_blank">🎵 SoundCloud</a>
+    <a href="https://discord.gg/yourserver" target="_blank">💬 Discord</a>
+<!-- Discord ボタン -->
+<a href="#" id="open-discord" class="discord-btn">
+  <img src="assets/icons/discord.png" class="icon" alt="Discord"> Discord
+</a>
+
+<!-- モーダル -->
+<div id="discord-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <iframe 
+      src="https://discord.com/widget?id=1304432235767926897&theme=dark"
+      width="350" height="500"
+      allowtransparency="true" frameborder="0"
+      sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+    </iframe>
+  </div>
+</div>
+
+      <footer>
+    <p>&copy; 2025 アーティスト名. All rights reserved.</p>
+      </footer>
+
+<script>
+  const modal = document.getElementById("discord-modal");
+  const openBtn = document.getElementById("open-discord");
+  const closeBtn = document.querySelector(".close-btn");
+
+  openBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    modal.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function(e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+
+
+      
+  <!-- ★ スクリプト：動画再生後にフェードアウト -->
+  <script>
+    const intro = document.getElementById('introVideoContainer');
+    const video = document.getElementById('introVideo');
+
+    video.addEventListener('ended', () => {
+      intro.classList.add('fade-out');
+      setTimeout(() => {
+        intro.style.display = 'none';
+      }, 1000); // フェードアウトに合わせて非表示
+    });
+  </script>
 </body>
 </html>

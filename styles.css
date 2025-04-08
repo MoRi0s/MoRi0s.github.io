@@ -29,7 +29,8 @@ body {
 .nav-menu {
   background-color: #ffffffcc;
   width: fit-content;
-  margin: 20px auto 0 auto;
+  margin: 0 auto;
+  margin-top: 10px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   padding: 10px 20px;
@@ -123,12 +124,23 @@ body {
 /* === アーティスト画像 === */
 .artist-photo {
   display: block;
-  margin: 60px auto 20px;
+  margin: 80px auto 20px;
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* === Discordウィジェット === */
+.discord-widget {
+  display: none;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+.discord-widget.active {
+  display: flex;
 }
 
 /* === フッター === */
@@ -151,7 +163,6 @@ footer img.footer-gif {
   height: 40px;
   width: auto;
 }
-
 /* 簡単なフェードインアニメーション（オプション） */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.9); }

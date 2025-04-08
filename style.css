@@ -119,6 +119,19 @@ footer p {
     margin: 0;
     font-size: 1.1em;
 }
+/* 通常（PCなど大きな画面）では表示 */
+.menu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* モバイル（768px以下）では非表示に */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+}
 
 /* ハンバーガーメニューのデフォルト（3本線） */
 .hamburger-menu {

@@ -165,8 +165,8 @@ main {
   text-align: center;
 }
 footer {
-  background-color: #2b2b2b;  /* ダークグレー背景 */
-  color: white;               /* テキストを白にすると見やすい */
+  background-color: #2b2b2b !important;
+  color: white !important;
   text-align: center;
   padding: 20px 0;
 }

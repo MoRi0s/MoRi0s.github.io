@@ -53,12 +53,12 @@ header h1 {
 }
 
 /* SNSアイコンのサイズを50px四方に設定 */
-.social-button img {
+.social-buttons img {
     width: 50px;
     height: 50px;
 }
 
-.social-button:hover {
+.social-buttons:hover {
     transform: scale(1.1);
 }
 

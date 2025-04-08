@@ -2,41 +2,35 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>アーティスト名</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>アーティスト名 - Official Site</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <div class="container">
-    <h1>アーティスト名</h1>
-    <div class="menu">
-      <a href="about.html">
-        <img src="images/icon-about.png" alt="プロフィール">
-        <p>プロフィール</p>
-      </a>
-      <a href="music.html">
-        <img src="images/icon-music.png" alt="楽曲">
-        <p>楽曲</p>
-      </a>
-      <a href="news.html">
-        <img src="images/icon-news.png" alt="ニュース">
-        <p>ニュース</p>
-      </a>
-      <a href="contact.html">
-        <img src="images/icon-contact.png" alt="お問い合わせ">
-        <p>お問い合わせ</p>
-      </a>
-    </div>
+<body class="dark-mode">
 
-    <div class="socials">
-      <a href="https://instagram.com" target="_blank">
-        <img src="images/sns-instagram.png" alt="Instagram">
-      </a>
-      <a href="https://twitter.com" target="_blank">
-        <img src="images/sns-twitter.png" alt="Twitter">
-      </a>
+  <header class="hero">
+    <div class="logo-container">
+      <img src="logo.png" alt="アーティストロゴ" class="logo" id="logoBtn">
+      <h1 class="artist-name">アーティスト名</h1>
     </div>
-  </div>
+  </header>
+
+  <section class="intro-video">
+    <video autoplay muted loop playsinline>
+      <source src="intro.mp4" type="video/mp4" />
+      お使いのブラウザは動画タグをサポートしていません。
+    </video>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://twitter.com/" target="_blank"><img src="icons/twitter.svg" alt="Twitter"></a>
+      <a href="https://instagram.com/" target="_blank"><img src="icons/instagram.svg" alt="Instagram"></a>
+      <a href="https://youtube.com/" target="_blank"><img src="icons/youtube.svg" alt="YouTube"></a>
+    </div>
+    <p>&copy; 2025 アーティスト名 All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
-

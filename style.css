@@ -135,3 +135,20 @@ body {
         background-color: #222222; /* ホバー時は濃いグレー */
     }
 }
+/* フッターのスタイル */
+footer {
+    background-color: #2b2b2b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%; /* 通常の状態では幅100% */
+}
+
+/* モバイル（768px以下）ではフッターの幅を狭くする */
+@media (max-width: 768px) {
+    footer {
+        width: 90%;  /* フッター幅を90%に設定 */
+        margin: 0 auto; /* 中央揃え */
+    }
+}

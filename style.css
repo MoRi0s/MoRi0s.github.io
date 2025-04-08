@@ -1,210 +1,67 @@
-/* 基本のスタイル */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
 }
 
-header {
-    background: linear-gradient(135deg, #0055ff, #5500ff);
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-    position: relative;
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 3em;
-}
-/* デフォルト（ライトモード） */
-body {
-    background-color: #ffffff;
-    color: #000000;
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-/* ダークモード時の背景とテキスト色 */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #000000;
-        color: #ffffff;
-    }
-
-    .overlay-menu {
-        background-color: #000000; /* ← メニュー背景も黒に */
-        color: white;
-    }
-
-    .overlay-nav a:hover {
-        background-color: #222222; /* ホバー時は濃いグレー */
-    }
-}
-
-/* SNSアイコンのスタイル */
-.social-button {
-    margin: 0 15px;
-    display: inline-block;
-    width: 50px; /* 初期状態でのサイズ */
-    height: 50px; /* 初期状態でのサイズ */
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #fff;
-    transition: transform 0.3s ease;
-}
-
-.social-button img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* モバイル（768px以下）の場合、SNSアイコンのサイズを調整 */
-@media (max-width: 768px) {
-    .social-button {
-        width: 40px; /* SNSアイコンの幅を少し小さく */
-        height: 40px; /* SNSアイコンの高さを少し小さく */
-    }
-}
-
-.social-button:hover {
-    transform: scale(1.1); /* ホバー時に拡大 */
-}
-
-/* メニューをヘッダー下中央に配置 */
-nav {
-    text-align: center;
-    margin-top: 20px;
-}
-
-nav a {
-    color: #000;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* アイコンを丸く表示 */
-.icon-container {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.artist-icon {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #0055ff;
-}
-
-/* フッターのスタイル */
-footer {
-    background-color: #2b2b2b;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    width: 100%; /* 通常の状態では幅100% */
-}
-
-/* モバイル（768px以下）ではフッターの幅を狭くする */
-@media (max-width: 768px) {
-    footer {
-        width: 90%;  /* フッター幅を90%に設定 */
-        margin: 0 auto; /* 中央揃え */
-    }
-}
-
-.footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-gif {
-    width: 50px;
-    height: 50px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1.1em;
-}
-
-/* 通常（PCなど大きな画面）では表示 */
 .menu {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
-/* モバイル（768px以下）では非表示に */
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-    }
+.menu a {
+  text-decoration: none;
+  color: #333;
+  width: 120px;
 }
 
-/* モバイル表示で出す */
-@media (max-width: 768px) {
-    .hamburger-menu {
-        display: flex;
-    }
+.menu img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
 }
 
-/* 初期状態：非表示＆位置ずらし */
-.overlay-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform 0.5s ease, opacity 0.5s ease;
+.menu img:hover {
+  transform: scale(1.05);
 }
 
-/* 表示状態：スライドしながらフェードイン */
-.overlay-menu.active {
-    display: flex;
-    opacity: 1;
-    transform: translateX(0);
+.menu p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
-/* メニュー背景を白に */
-.overlay-menu {
-    background-color: white; /* ← 白背景 */
-    color: black;            /* テキスト黒に */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
-/* メニューリンクのスタイル */
-.overlay-nav a {
-    display: block;
-    font-size: 2em;
-    margin: 20px 0;
-    text-decoration: none;
-    color: inherit; /* 親要素の色を継承 */
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* 背景色と文字色も変わるように */
+.socials img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: opacity 0.2s ease;
 }
 
-/* ホバー時に背景色と文字色を変更 */
-.overlay-nav a:hover {
-    background-color: #e0f0ff; /* ライトブルー */
-    color: #0055ff; /* ホバー時に文字色を青に変更 */
+.socials img:hover {
+  opacity: 0.7;
 }
-
-

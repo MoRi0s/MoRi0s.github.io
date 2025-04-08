@@ -185,7 +185,7 @@ footer {
 }
 
 .footer-gif {
-  width: 50px;   /* 小さめサイズに調整 */
+  width: 30px;   /* 小さめサイズに調整 */
   height: auto;
   animation: fadeIn 1s ease-in-out;
 }

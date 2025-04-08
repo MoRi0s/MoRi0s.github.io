@@ -180,8 +180,6 @@
 
 <p><a class="twitter-timeline" data-width="600" data-height="1000" data-theme="dark" href="https://twitter.com/MR10k4_?ref_src=twsrc%5Etfw">Tweets by MR10k4_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 
-<script src="h.js"></script>
-
   <script>
   const modal = document.getElementById("discord-modal");
   const openBtn = document.getElementById("open-discord");
@@ -230,6 +228,24 @@
     // 動画要素自体が無い場合も非表示にする
     hideIntro();
   }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger-menu");
+        const overlay = document.getElementById("overlay-menu");
+
+        hamburger.addEventListener("click", () => {
+            overlay.classList.toggle("active");
+            hamburger.classList.toggle("active");
+        });
+
+        overlay.addEventListener("click", (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove("active");
+                hamburger.classList.remove("active");
+            }
+        });
+    });
 </script>
 
 </body>

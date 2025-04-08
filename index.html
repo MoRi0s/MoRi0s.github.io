@@ -236,17 +236,20 @@
 
   <!-- ヘッダー -->
 <header class="site-header">
-    <div class="logo">アーティスト名</div>
-    <!-- ハンバーガーアイコン -->
-<div class="menu-toggle" id="menu-toggle">☰</div>
-</header>
   <div class="header-container">
-    <nav class="nav-links">
+    <div class="logo">アーティスト名</div>
+
+    <!-- ☰ ハンバーガー -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <!-- メニュー -->
+    <nav class="nav-links" id="nav-links">
       <a href="profile.html">プロフィール</a>
       <a href="music.html">リリース楽曲</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
   </div>
+</header>
 
 
   <!-- プロフィール写真 -->
@@ -292,6 +295,14 @@
     <p>© 2025 アーティスト名. All Rights Reserved.</p>
     <p>Follow me on <a href="https://twitter.com/yourusername" target="_blank">Twitter</a> | <a href="https://instagram.com/yourusername" target="_blank">Instagram</a></p>
   </footer>
+  <script>
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-links");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+</script>
 <script>
   const modal = document.getElementById("discord-modal");
   const openBtn = document.getElementById("open-discord");
@@ -305,14 +316,6 @@
 
   closeBtn.addEventListener("click", function () {
     modal.style.display = "none";
-  });
-</script>
-<script>
-  const toggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav-links");
-
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("open");
   });
 </script>
 

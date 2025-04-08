@@ -61,6 +61,7 @@
 }
 
 /* ハンバーガーアイコン */
+/* PCでは非表示 */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -69,9 +70,10 @@
   color: white;
 }
 
+/* スマホで表示 */
 @media (max-width: 768px) {
-  .nav-links {
-    display: flex;
+  .menu-toggle {
+    display: block;
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -235,11 +237,8 @@
   <!-- ヘッダー -->
 <header class="site-header">
     <div class="logo">アーティスト名</div>
-
     <!-- ハンバーガーアイコン -->
-    <div class="menu-toggle" id="menu-toggle">
-      ☰
-    </div>
+<div class="menu-toggle" id="menu-toggle">☰</div>
 </header>
   <div class="header-container">
     <nav class="nav-links">

@@ -131,17 +131,6 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-/* === Discordウィジェット === */
-.discord-widget {
-  display: none;
-  justify-content: center;
-  margin: 40px auto;
-}
-
-.discord-widget.active {
-  display: flex;
-}
-
 /* === フッター === */
 footer {
   background-color: #2b2b2b;
@@ -162,34 +151,6 @@ footer img.footer-gif {
   height: 40px;
   width: auto;
 }
-
-.twitter-embed {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-/* === オーバーレイ動画（フェードアウト） === */
-#intro-video-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 1.5s ease;
-}
-
-#intro-video-container.fade-out {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-
 
 /* 簡単なフェードインアニメーション（オプション） */
 @keyframes fadeIn {

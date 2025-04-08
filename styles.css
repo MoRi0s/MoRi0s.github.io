@@ -164,15 +164,13 @@ main {
   padding: 120px 20px 20px; /* ヘッダーが固定されているため、コンテンツが隠れないように余白を追加 */
   text-align: center;
 }
-    /* フッター */
-    footer {
-      background-color: #f1f1f1;
-      color: white;
-      padding: 1.5rem;
-      margin-top: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
+footer {
+  background-color: #f1f1f1;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 2rem;
+　font-size: 0.9rem;
+}
 
     footer a:hover {
       text-decoration: underline;

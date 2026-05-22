@@ -1,0 +1,180 @@
+.music-container{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+/* ===== カード ===== */
+.music-card{
+  position: relative;
+
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+
+  padding: 12px;
+
+  transition: 0.25s ease;
+}
+
+.music-card:hover{
+  transform: translateY(-6px);
+  background: rgba(37,99,235,0.15);
+  border-color: rgba(37,99,235,0.3);
+}
+
+/* ジャケット */
+.music-card img{
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* タイトル */
+.music-title{
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* アーティスト */
+.music-artist{
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+/* ===== リンクまとめ ===== */
+.music-links{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* リンク統一 */
+.music-link{
+  color: #7db7ff;
+  text-decoration: none;
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+.music-link:hover{
+  color: #fff;
+}
+
+/* ===== 日付（右下） ===== */
+.music-date{
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+
+  text-align: right;
+
+  font-size: 11px;
+  line-height: 1.5;
+
+  opacity: 0.7;
+}
+
+.music-date span{
+  color: #7db7ff;
+  font-weight: bold;
+}
+
+/* ===== ローディング ===== */
+#loading{
+  text-align: center;
+  padding: 40px;
+  opacity: 0.8;
+}
+
+/* ===== Latest ===== */
+.Latest{
+  text-align: center;
+  color: #fff;
+  font-size: 28px;
+  margin: 40px 0 20px;
+}
+
+/* ===== YouTube ===== */
+#latest-video{
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+#latest-video iframe{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.5),
+    0 0 20px rgba(37,99,235,0.25);
+
+  transition: 0.3s ease;
+}
+
+#latest-video iframe:hover{
+  transform: translateY(-4px);
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.6),
+    0 0 30px rgba(37,99,235,0.35);
+}
+
+.youtube-title{
+  text-align: center;
+  margin: 20px 0 10px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px){
+  #latest-video{
+    padding: 0 10px;
+  }
+}
+.card-top{
+  cursor: pointer;
+}
+
+.card-top img{
+  width: 100%;
+  display: block;
+}
+
+#latest-video{
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+#latest-video iframe{
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+  height: auto;
+
+  display: block;
+
+  border: none;
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.5);
+}

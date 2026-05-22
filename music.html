@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoRi Music</title>
+
+  <link rel="stylesheet" href="sty.css">
+  <link rel="stylesheet" href="music.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="/prof/logo.png" width="150">
+    </a>
+  </div>
+</header>
+
+<button class="menu-toggle" id="menuToggle">☰</button>
+
+<nav class="menu-bar">
+  <a href="index.html">Home</a>
+  <a href="profile.html">Profile</a>
+  <a href="music.html">Music</a>
+  <a href="https://morixxx.com/news/">News</a>
+  <a href="https://morixxx.com/blog/">Blog</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<h1 class="youtube-title">Latest Video</h1>
+<div id="latest-video"></div>
+
+<section class="hero">
+  <h1 class="artist-name">Released Music</h1>
+</section>
+
+<!-- ★ここが表示エリア（1個だけ） -->
+<div id="music" class="music-container"></div>
+<div id="loading">Loading...</div>
+<br>
+
+<img class="counter" src="https://kauntah-svg.vercel.app/counter.svg" referrerpolicy="origin" />
+
+<footer>
+  <p>© 2026 MoRi All Rights Reserved.</p>
+</footer>
+
+<!-- JS（最後） -->
+<script src="music.js"></script>
+<script src="script.js"></script>
+<script src="yt.js"></script>
+
+</body>
+</html>

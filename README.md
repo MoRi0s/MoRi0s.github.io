@@ -1,10 +1,5 @@
-THIS IS MY WEBSITE.
+THIS IS MY WEBSITE
 
 
 
 
-
-
-
-
-(・ヮ・)

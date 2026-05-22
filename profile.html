@@ -1,51 +1,182 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>アーティストサイト</title>
-  <link rel="stylesheet" href="styles.css"> <!-- CSSファイルをリンク -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoRi Official Site</title>
+
+  <link rel="stylesheet" href="sty.css">
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="icon" type="image/png" href="prof/prf.jpg">
 </head>
 <body>
 
-  <!-- ヘッダー -->
-<!-- ヘッダー内のアーティスト名 -->
-<header class="site-header">
-  <div class="header-container">
- <div class="logo">MoRi</div>
-    <nav class="nav-links">
-　　　<a href="index.html">ホーム</a>
-      <a href="profile.html">プロフィール</a>
-      <a href="releases.html">リリース楽曲</a>
-      <a href="contact.html">お問い合わせ</a>
-    </nav>
-    <div class="menu-toggle">
-      <!-- ハンバーガーアイコン -->
+  <!-- Opening Video -->
+  <section class="opening-video" id="opening">
+    <video autoplay muted playsinline id="openingvideo">
+      <source src="/prof/19.mp4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay">
     </div>
+  </section>
+
+  <header>
+    <div class="logo">
+      <a href="index.html" class="site-title">
+      <img src="/prof/logo.png" alt="Artist Logo" width="150" id="logo">
+      </a>
+    </div>
+
+
+  </header>
+      <button class="menu-toggle" id="menuToggle">
+  ☰
+</button>
+
+  <nav class="menu-bar">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="music.html">Music</a>
+    <a href="https://morixxx.com/news/">News</a>
+    <a href="https://morixxx.com/blog/">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+<br>
+<main class="main-content">
+  <section class="hero">
+    <div class="card">
+
+     <br><br>
+      <h1 class="proname">Profile</h1><br>
+    </div>
+<dl class="artist-desc">
+  <dt>名前</dt><dd>MoRi/盛岡</dd>
+  <dt>生年月日</dt><dd>2007年12月25日</dd>
+  <dt>趣味</dt><dd>音楽（作曲、鑑賞、ピアノ）、ガジェット（コンピューターなど）、ゲーム、旅行　など</dd>
+  <dt>使用DAW</dt><dd>CakeWalk Sonar,GarageBand(Mac)</dd>
+  <dt>特技</dt><dd>iPhoneの機種を当てること</dd>
+  <dt>持っているスマホ（2026/5/18現在）</dt><dd>Galaxy S26 Ultra/vivo X90 Pro+/vivo X Fold3 Pro/vivo X100 Pro/Galaxy S20/iPhone14</dd>
+</dl>
+<br>
+</section>
+<br><br><br>
+<h1 class="about">
+  About(Composer)
+</h1>
+<section class="about">
+
+  <div class="about-item">
+    
+    <div class="text">
+    <p>
+      　小学1年生からピアノを始める。中学2年生で一旦ピアノから離れるが、中学3年生でMuseScoreという楽譜作成ソフトに触れ、作曲に興味を持つ。それからMuseScoreでピアノ曲を中心として作り、2023年に初めてのオリジナル曲「無題」を投稿。その後はピアノ曲をいくつか制作、投稿していた。
+
+    </p>  
+    </div>
+     <img src="pic/image3.png">
   </div>
-</header>
 
-
-
-
-<!-- アーティスト画像 -->
-<section id="artist-image">
-  <div class="image-container">
-    <img src="profilesss.jpg" alt="アーティストの名前" class="artist-image">
+  <div class="about-item reverse">
+    <div class="text">
+        <p>
+          　高校1年生の時、チュウニズムという音楽ゲームにて、HARDCOREというジャンルを認知する。それからHARDCOREや電子音楽にハマり、作曲の方向性が定まる。
+        </p>
+    </div>
+    <img src="pic/uniuni.jpg">
   </div>
+
+  <div class="about-item">
+    <div class="text">
+        <p>
+          　高校1年生の夏、PCを借りて初めてCakewalkというDAWに触れ、独学でDAWの使い方や音楽理論を学ぶ。そして、2024年、初めてのHARDCORE曲「M1dnight Melody」を制作、リリースする。
+            
+        </p>
+    </div>
+    <img src="pic/image.png">
+  </div>
+
+
+
+  <div class="about-item reverse">
+    <div class="text">
+    <p>
+      　以来、HARDCOREやSPEEDCOREを中心とした楽曲を制作している。また、2026年に大学へ入学し、DJサークル「Aizu-DMC」に入部。DJとしての活動を本格的に開始した。最近は、公募への応募や5人での合作などをしていて、徐々に活動を広げている。
+    </p>
+    </div>
+    <img src="pic/image2.jpg">
+  </div>
+
+
+
+
+
+
+
+</section>
+<br><br><br><br><br><br>
+<h1 class="about">
+  About(Gadget)
+</h1>
+<section class="about">
+
+  <div class="about-item">
+    <div class="text">
+        <p>
+          　高校1年生の春、親に初めてのスマホであるiPhone14を買ってもらう。当時は、Apple信者だったため、iPhoneにしか興味がなかったが、高校時代の友人が持っていたGalaxy端末に興味を持ち、Androidに手を出し始める。
+        </p>
+    </div>
+    <img src="pic/i14.jpg">
+  </div>
+
+  <div class="about-item reverse">
+    <div class="text">
+        <p>
+          　高校2年生の夏、Galaxy S21を購入。これがきっかけで、Android端末にどんどんハマっていく。そこから、いろいろな端末に手を出し始める。日本だけでなく、海外の端末も積極的に購入するようになる。
+        </p>
+        <p>
+          　また、スマホ以外のガジェットにも興味を持ち、MacなどのPCやタブレットなども購入するようになる。最近では、スマートウォッチやワイヤレスイヤホンなども購入している。
+        </p>
+    </div>
+    <img src="pic/viv.jpg">
+  </div>
+
+  <div class="about-item">
+    <div class="text">
+        <p>
+          　現在は、Windows PCとMacの両方を所有しており、用途に応じて使い分けている。スマホは、Galaxy S26 Ultraをメインで使っているが、vivo X Fold3 ProやiPhone14などの端末もサブ機として使用している。また、最近はスマホの修理にも興味を持ち、いくつかの端末を分解して修理することもある。
+        </p>
+    </div>
+    <img src="pic/26u.jpg">
+  </div>
+
 </section>
 
-  <!-- コンテンツ部分 -->
-  <main>
-    <h1>Welcome to the Artist's Official Website!</h1>
-    <p>コンテンツがここに表示されます。</p>
-  </main>
+<script src="profile.js"></script>
+<br><br><br>
 
-  <!-- フッター -->
-  <footer>
-    <p>&copy; 2025 アーティスト名. All Rights Reserved.</p>
-  </footer>
 
+<br>
+</main>
+<img class="counter" src="https://kauntah-svg.vercel.app/counter.svg" referrerpolicy="origin" />
+<footer>
+
+   
+    <div class="footer-sns">
+      <a href="https://x.com/M0Rx0k4"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://instagram.com/_qtxll"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://youtube.com/@MoRi_0ss"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://discord.gg/AtsyBu4NRs"><i class="fa-brands fa-discord"></i></a>
+      <a href="https://on.soundcloud.com/OfYD2zfzSR8My1a9UR"><i class="fa-brands fa-soundcloud"></i></a>
+    </div>
+    <a href="index.html">
+    <img class="footer-image" src="/prof/21.gif" alt="Footer Image" width="75">
+    </a>
+
+    <p>© 2026 MoRi All Rights Reserved.</p>
+</footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-

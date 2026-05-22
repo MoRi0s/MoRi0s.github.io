@@ -1,32 +1,221 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="アーティストへのお問い合わせページ">
-    <title>お問い合わせ</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoRi Official Site</title>
+
+  <link rel="stylesheet" href="sty.css">
+  <link rel="stylesheet" href="cont.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="icon" type="image/png" href="prof/prf.jpg">
+
+  <script
+src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+async
+defer>
+</script>
+
 </head>
+
+
+
 <body>
-    <header>
-        <h1>アーティストの名前</h1>
-    </header>
 
-    <nav>
-        <a href="index.html">ホーム</a>
-        <a href="about.html">アーティスト紹介</a>
-        <a href="portfolio.html">ポートフォリオ</a>
-        <a href="news.html">ニュース</a>
-    </nav>
+  <!-- Opening Video -->
+  <section class="opening-video" id="opening">
+    <video autoplay muted playsinline id="openingvideo">
+      <source src="/prof/19.mp4" type="video/mp4">
+    </video>
 
-    <section>
-        <h2>お問い合わせ</h2>
-        <p>お仕事の依頼や質問があれば、以下のメールアドレスまでご連絡ください。</p>
-        <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+    <div class="video-overlay">
+    </div>
+  </section>
+
+  <header>
+    <div class="logo">
+      <a href="index.html" class="site-title">
+      <img src="/prof/logo.png" alt="Artist Logo" width="150" id="logo">
+      </a>
+    </div>
+
+
+  </header>
+      <button class="menu-toggle" id="menuToggle">
+  ☰
+</button>
+
+  <nav class="menu-bar">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="music.html">Music</a>
+    <a href="https://morixxx.com/news/">News</a>
+    <a href="https://morixxx.com/blog/">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+<br>
+  <main class="contact-page">
+
+    <section class="contact-hero">
+      <h1>CONTACT</h1>
+      <p>
+        楽曲制作 / コラボ / イベント出演 /
+        その他お問い合わせはこちら
+      </p><br>
+      <p>※現在、本業が忙しいため、楽曲制作の依頼は基本的に受け付けていません。</p>
+      <p>どうしても制作をご希望の場合は、下記のフォームに用件を記入し、送信してください。</p>
     </section>
 
-    <footer>
-        <p>&copy; 2025 アーティストの名前. All rights reserved.</p>
-    </footer>
+    <section class="contact-container">
+
+<form
+  class="contact-form"
+  id="contact-form"
+  action="https://formspree.io/f/mredpeng"
+  method="POST"
+>
+
+    <input
+    type="hidden"
+    name="_next"
+    value="https://morixxx.com/thanks.html"
+  >
+
+    <input
+    type="hidden"
+    name="_redirect"
+    value="https://morixxx.com/thanks.html"
+  >
+
+  <div class="input-group">
+    <label>NAME</label>
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+    >
+  </div>
+
+
+
+  <div class="input-group">
+    <label>EMAIL</label>
+
+    <input
+      type="email"
+      name="email"
+      placeholder="example@mail.com"
+      required
+    >
+  </div>
+
+  <div class="input-group">
+    <label>CATEGORY</label>
+
+    <select name="category">
+
+            <option>楽曲依頼</option>
+            <option>コラボ</option>
+            <option>イベント</option>
+            <option>DJ</option>
+            <option>質問</option>
+            <option>バグ報告</option>
+            <option>その他</option>
+
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label>MESSAGE</label>
+
+    <textarea
+      name="message"
+      rows="8"
+      placeholder="Message..."
+      required
+    ></textarea>
+  </div>
+
+  <div
+  class="cf-turnstile"
+  data-sitekey="0x4AAAAAADTXcdXcAFTZM3cs"
+  data-callback="enableSubmit">
+</div>
+
+<button
+  type="submit"
+  class="send-button"
+  disabled
+>
+  VERIFY CAPTCHA
+</button>
+
+</form>
+
+    </section>
+
+    <section class="contact-sns">
+
+
+      <h2>DIRECT CONTACT</h2>
+
+      <div class="sns-cards">
+
+        <a href="https://x.com/M0Rx0k4" class="sns-card">
+          <i class="fa-brands fa-x-twitter"></i>
+          <span>X / Twitter</span>
+        </a>
+
+        <a href="https://discord.gg/AtsyBu4NRs" class="sns-card">
+          <i class="fa-brands fa-discord"></i>
+          <span>Discord</span>
+        </a>
+
+        <a href="mailto:info@morixxx.com" class="sns-card">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Email</span>
+        </a>
+        <a href="mailto:mori.0s.info@gmail.com" class="sns-card">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Sub Email（上のアドレスが無効の時のみこちらで送信してください）</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+<br><br><br>
+
+<h2>
+
+</h2>
+<br>
+<img class="counter" src="https://kauntah-svg.vercel.app/counter.svg" referrerpolicy="origin" />
+<footer>
+
+   
+    <div class="footer-sns">
+      <a href="https://x.com/M0Rx0k4"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://instagram.com/_qtxll"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://youtube.com/@MoRi_0ss"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://discord.gg/AtsyBu4NRs"><i class="fa-brands fa-discord"></i></a>
+      <a href="https://on.soundcloud.com/OfYD2zfzSR8My1a9UR"><i class="fa-brands fa-soundcloud"></i></a>
+    </div>
+    <a href="index.html">
+    <img class="footer-image" src="/prof/21.gif" alt="Footer Image" width="75">
+    </a>
+
+    <p>© 2026 MoRi All Rights Reserved.</p>
+    
+</footer>
+
+
+  <script src="script.js"></script>
+  <script src="cont.js"></script>
 </body>
 </html>

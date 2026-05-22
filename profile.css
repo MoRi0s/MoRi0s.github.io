@@ -1,0 +1,198 @@
+html,body {
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+
+footer {
+  padding-bottom: calc(40px + env(safe-area-inset-bottom));
+}
+
+body {
+  padding-top: 100px;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+    url("prof/prf.jpg");
+
+  background-size: cover;
+  background-position: center;
+  
+  background-attachment: scroll;
+
+  color: white;
+
+  overflow-x: hidden;
+
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* ===== 共通 ===== */
+
+* {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text,
+dd,
+dt,
+p,
+h1 {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* ===== メイン幅 ===== */
+
+.main-content {
+  width: 100% !important;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding-left: clamp(12px, 3vw, 24px);
+  padding-right: clamp(12px, 3vw, 24px);
+}
+
+/* ===== PROFILE ===== */
+
+.artist-desc {
+  width: 100%;
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 160px 1fr;
+
+  gap: 12px 20px;
+
+  padding: 24px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+
+  backdrop-filter: blur(10px);
+}
+
+.artist-desc dt {
+  color: #7db7ff;
+  font-weight: bold;
+  text-align: right;
+}
+
+.artist-desc dd {
+  margin: 0;
+  color: white;
+  text-align: left;
+}
+
+/* ===== ABOUT ===== */
+
+h1.about {
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  opacity: 0;
+  transform: translateX(-80px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.about-item.reverse {
+  flex-direction: row-reverse;
+  transform: translateX(80px);
+}
+
+.about-item.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-item .text {
+  flex: 1;
+}
+
+.about-item img {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+  border-radius: 12px;
+
+  flex-shrink: 0;
+}
+
+/* ===== スマホ ===== */
+
+@media (max-width: 768px) {
+
+  .artist-desc {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .artist-desc dt {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .artist-desc dd {
+    text-align: left;
+  }
+
+  .about-item,
+  .about-item.reverse {
+    flex-direction: column;
+    text-align: left;
+
+    gap: 20px;
+  }
+
+  .about-item img {
+    width: 70%;
+    max-width: 260px;
+  }
+
+  h1.about {
+    font-size: 28px;
+  }
+}

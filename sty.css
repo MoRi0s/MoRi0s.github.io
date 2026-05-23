@@ -422,6 +422,10 @@ footer{
   justify-items: center;
 }
 
+.footer-sns a {
+  font-size: 28px;
+}
+
 .discord-wrap {
   width: 100%;
   display: flex;
